@@ -33,16 +33,19 @@ const App = () => {
         <Route
           path="register"
           element={!user ? <Register /> : <Navigate to="/" replace={true} />}
+          errorElement={<NotFound />}
         />
         <Route
           path="login"
           element={!user ? <Login /> : <Navigate to="/" replace={true} />}
+          errorElement={<NotFound />}
         />
         <Route
           path="dashboard"
           element={
             user ? <DashboardLayout /> : <Navigate to="/login" replace={true} />
           }
+          errorElement={<NotFound />}
         >
           <Route
             index
@@ -57,6 +60,7 @@ const App = () => {
                 <Navigate to="/login" replace={true} />
               )
             }
+            errorElement={<NotFound />}
           />
           <Route
             path="create"
@@ -71,6 +75,7 @@ const App = () => {
                 <Navigate to="/login" replace={true} />
               )
             }
+            errorElement={<NotFound />}
           />
           <Route
             path="edit/:id"
@@ -126,7 +131,12 @@ const App = () => {
           errorElement={<NotFound />}
           loader={applyLoader}
         />
-        <Route path="/jobs" element={<Jobs />} loader={jobLoader} />
+        <Route
+          path="/jobs"
+          element={<Jobs />}
+          loader={jobLoader}
+          errorElement={<NotFound />}
+        />
         <Route path="*" element={<NotFound />} />
       </Route>
     )
