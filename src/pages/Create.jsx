@@ -33,7 +33,7 @@ const Create = () => {
     setError("");
     setLoading(true);
 
-    const response = await fetch("http://localhost:3000/api/jobs", {
+    const response = await fetch("https://jobhub-xakf.onrender.com/api/jobs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -44,7 +44,7 @@ const Edit = () => {
     setError("");
     setLoading(true);
 
-    const response = await fetch("http://localhost:3000/api/jobs/" + id, {
+    const response = await fetch("https://jobhub-xakf.onrender.com/api/jobs/" + id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

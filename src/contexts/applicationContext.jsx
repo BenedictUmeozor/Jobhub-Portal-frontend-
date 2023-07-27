@@ -35,7 +35,7 @@ export const ApplicationContextProvider = ({ children }) => {
   useEffect(() => {
     const fetchAppications = async () => {
       const response = await fetch(
-        "http://localhost:3000/api/applications/applicant",
+        "https://jobhub-xakf.onrender.com/api/applications/applicant",
         {
           method: "POST",
           headers: {

@@ -406,7 +406,7 @@ const Jobs = () => {
 export default Jobs;
 
 export const jobLoader = async () => {
-  const response = await fetch("http://localhost:3000/api/jobs/all");
+  const response = await fetch("https://jobhub-xakf.onrender.com/api/jobs/all");
   const data = await response.json();
 
   if (!response.ok) {

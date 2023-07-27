@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 export const detailsLoader = async ({ params }) => {
   const { id } = params;
 
-  const response = await fetch(`http://localhost:3000/api/jobs/${id}`);
+  const response = await fetch(`https://jobhub-xakf.onrender.com/api/jobs/${id}`);
   const job = await response.json();
 
   return { id, job };
@@ -29,7 +29,7 @@ const JobDetails = () => {
   useEffect(() => {
     const fetchApplication = async () => {
       const res = await fetch(
-        "http://localhost:3000/api/applications/application/" + id,
+        "https://jobhub-xakf.onrender.com/api/applications/application/" + id,
         {
           method: "POST",
           headers: { authorization: "Bearer " + user.token },

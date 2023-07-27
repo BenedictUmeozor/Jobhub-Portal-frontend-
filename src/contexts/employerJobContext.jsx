@@ -37,7 +37,7 @@ export const EmployerJobContextProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchJobs = async () => {
-      const response = await fetch("http://localhost:3000/api/jobs/employer", {
+      const response = await fetch("https://jobhub-xakf.onrender.com/api/jobs/employer", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${user.token}`,

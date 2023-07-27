@@ -14,7 +14,7 @@ const Application = (application) => {
 
   const handleClick = async (id) => {
     const response = await fetch(
-      "http://localhost:3000/api/applications/" + id,
+      "https://jobhub-xakf.onrender.com/api/applications/" + id,
       {
         method: "DELETE",
         headers: { authorization: "Bearer " + user.token },

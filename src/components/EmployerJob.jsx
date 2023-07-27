@@ -10,7 +10,7 @@ const EmployerJob = ({ job }) => {
   const { dispatch } = useEmployerJobContext();
 
   const handleClick = async (_id) => {
-    const response = await fetch("http://localhost:3000/api/jobs/" + _id, {
+    const response = await fetch("https://jobhub-xakf.onrender.com/api/jobs/" + _id, {
       method: "DELETE",
       headers: { authorization: "Bearer " + user.token },
     });

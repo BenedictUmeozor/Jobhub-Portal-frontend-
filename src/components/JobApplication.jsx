@@ -21,14 +21,14 @@ const JobApplication = ({ application, pageId, pageTitle }) => {
   const handleClick = async (event, id) => {
     let res;
     if (event === "accept") {
-      res = await fetch(`http://localhost:3000/api/applications/accept/${id}`, {
+      res = await fetch(`https://jobhub-xakf.onrender.com/api/applications/accept/${id}`, {
         method: "POST",
         headers: {
           authorization: "Bearer " + user.token,
         },
       });
     } else if (event === "reject") {
-      res = await fetch(`http://localhost:3000/api/applications/reject/${id}`, {
+      res = await fetch(`https://jobhub-xakf.onrender.com/api/applications/reject/${id}`, {
         method: "POST",
         headers: {
           authorization: "Bearer " + user.token,

@@ -21,7 +21,7 @@ export const AuthContextProvider = ({ children }) => {
 
   useEffect(() => {
     const checkToken = async (u) => {
-      const response = await fetch("http://localhost:3000/api/auth/token", {
+      const response = await fetch("https://jobhub-xakf.onrender.com/api/auth/token", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -11,7 +11,7 @@ export const JobContextProvider = ({ children }) => {
 
   const fetchJobs = async () => {
     const response = await fetch(
-      `http://localhost:3000/api/jobs?page=${currentPage}&limit=${itemsPerPage}`
+      `https://jobhub-xakf.onrender.com/api/jobs?page=${currentPage}&limit=${itemsPerPage}`
     );
     const { jobs, totalCount } = await response.json();
 

@@ -12,7 +12,7 @@ const JobApplications = () => {
 
   const fetchApplications = async () => {
     const res = await fetch(
-      `http://localhost:3000/api/applications/job/${id}`,
+      `https://jobhub-xakf.onrender.com/api/applications/job/${id}`,
       {
         method: "POST",
         headers: {
