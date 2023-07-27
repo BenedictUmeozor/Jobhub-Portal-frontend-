@@ -7,7 +7,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 export const editLoader = async ({ params }) => {
   const { id } = params;
 
-  const response = await fetch(`http://localhost:3000/api/jobs/${id}`);
+  const response = await fetch(`https://jobhub-xakf.onrender.com/api/jobs/${id}`);
   const job = await response.json();
 
   return { id, job };
