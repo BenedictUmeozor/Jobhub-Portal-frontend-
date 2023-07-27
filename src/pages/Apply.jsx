@@ -39,7 +39,7 @@ const Apply = () => {
     setError("");
     setLoading(true);
 
-    const response = await fetch("http://localhost:3000/api/applications", {
+    const response = await fetch("https://jobhub-xakf.onrender.com/api/applications", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -69,7 +69,7 @@ const Apply = () => {
     const fetchApplication = async () => {
       setApplied(false);
       const res = await fetch(
-        "http://localhost:3000/api/applications/application/" + job._id,
+        "https://jobhub-xakf.onrender.com/api/applications/application/" + job._id,
         {
           method: "POST",
           headers: { authorization: "Bearer " + user.token },
