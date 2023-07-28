@@ -11,7 +11,9 @@ import { useEffect, useState } from "react";
 export const detailsLoader = async ({ params }) => {
   const { id } = params;
 
-  const response = await fetch(`https://jobhub-xakf.onrender.com/api/jobs/${id}`);
+  const response = await fetch(
+    `https://jobhub-xakf.onrender.com/api/jobs/${id}`
+  );
   const job = await response.json();
 
   return { id, job };
@@ -112,7 +114,10 @@ const JobDetails = () => {
             ) : (
               <div>
                 <p className="error-text">Your application was rejected</p>
-                <button>Cancel Application</button>
+                <p className="dashboard-link">
+                  Delete your application from your{" "}
+                  <Link to="/dashboard">dashboard</Link>
+                </p>
               </div>
             )))}
       </div>
