@@ -19,6 +19,11 @@ const reducer = (state, action) => {
           (application) => application._id !== action.payload._id
         ),
       };
+    case "LOGOUT":
+      return {
+        ...state,
+        applications: null,
+      };
     default:
       return state;
   }

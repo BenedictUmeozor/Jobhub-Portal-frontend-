@@ -21,6 +21,11 @@ const reducer = (state, action) => {
         ...state,
         jobs: state.jobs.filter((job) => job._id !== action.payload._id),
       };
+    case "LOGOUT":
+      return {
+        ...state,
+        jobs: null,
+      };
     default:
       return state;
   }
@@ -37,12 +42,15 @@ export const EmployerJobContextProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchJobs = async () => {
-      const response = await fetch("https://jobhub-xakf.onrender.com/api/jobs/employer", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      });
+      const response = await fetch(
+        "https://jobhub-xakf.onrender.com/api/jobs/employer",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
 
       const data = await response.json();
 
@@ -66,8 +74,6 @@ export const EmployerJobContextProvider = ({ children }) => {
       fetchJobs();
     }
   }, [user]);
-
- 
 
   return (
     <employerJobContext.Provider value={{ state, dispatch }}>

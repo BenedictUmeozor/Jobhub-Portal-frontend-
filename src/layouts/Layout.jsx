@@ -3,19 +3,28 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { useAuthContext } from "../hooks/useAuthContext";
+import { useEmployerJobContext } from "../hooks/useEmployerJobContext";
+import { useAppllicationContext } from "../hooks/useApplicationContext";
 
 const Layout = () => {
   const {
     state: { user },
     dispatch,
   } = useAuthContext();
+  const { dispatch: employerJobDispatch } = useEmployerJobContext();
+  const { dispatch: applicationDispatch } = useAppllicationContext();
 
   const logout = () => {
     localStorage.removeItem("user");
     dispatch({
       type: "LOGOUT",
     });
-    console.log("Logged out");
+    employerJobDispatch({
+      type: "LOGOUT",
+    });
+    applicationDispatch({
+      type: "LOGOUT",
+    });
   };
 
   return (
