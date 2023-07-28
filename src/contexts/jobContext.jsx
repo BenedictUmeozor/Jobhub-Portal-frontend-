@@ -23,6 +23,8 @@ export const JobContextProvider = ({ children }) => {
     setCurrentPage(pageNumber);
   };
 
+  fetchJobs()
+
   useEffect(() => {
     fetchJobs();
   }, [currentPage]);

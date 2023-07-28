@@ -66,6 +66,16 @@ const Jobs = () => {
         setJobs(filteredJobs);
       }
 
+      if (modeValue && !typeValue && categoryValue) {
+        filteredJobs = data.filter(
+          (job) =>
+            job.title.toLowerCase().includes(value.toLowerCase()) &&
+            job.mode === modeValue.toLowerCase() &&
+            job.type === categoryValue.toLowerCase()
+        );
+        setJobs(filteredJobs);
+      }
+
       if (modeValue && typeValue && !categoryValue) {
         filteredJobs = data.filter(
           (job) =>

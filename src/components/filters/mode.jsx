@@ -27,6 +27,7 @@ const ModeSelect = ({ value, onChange }) => {
       styles={customStyles}
       defaultValue={value}
       onChange={(e) => onChange(e.value)}
+      placeholder={"Select mode"}
     />
   );
 };

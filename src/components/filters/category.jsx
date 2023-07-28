@@ -30,6 +30,7 @@ const CategorySelect = ({ value, onChange }) => {
       styles={customStyles}
       defaultvalue={value}
       onChange={(e) => onChange(e.value)}
+      placeholder={"Select category"}
     />
   );
 };

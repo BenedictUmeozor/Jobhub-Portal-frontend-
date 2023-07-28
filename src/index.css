@@ -370,7 +370,7 @@ form .summary label {
 }
 
 .job-title h3 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: #006064;
 }
@@ -572,7 +572,7 @@ form .summary label {
 }
 
 .employer-job h3 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 
@@ -680,7 +680,7 @@ form.confirm .small-error {
 }
 
 .job-application h3 {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: #006064;
   margin-bottom: 0.3rem;
@@ -751,7 +751,7 @@ form.confirm .small-error {
 }
 
 .employer-job-application h2 {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
@@ -778,7 +778,7 @@ form.confirm .small-error {
   padding: 1rem;
 }
 
-.job-app h2 {
+.job-app h2, .job-app h3 {
   font-weight: 500;
   font-size: 1.2rem;
   margin-bottom: 0.4rem;
