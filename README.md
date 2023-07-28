@@ -30,7 +30,7 @@ Desktop view
 
 Mobile view
 
-![](./screenshots/mobile-design.png)
+![](./screenshots/mobile-preview.png)
 
 ### Links
 
